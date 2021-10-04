@@ -15,4 +15,21 @@ public class KafkaSampleProducerService {
         this.kafkaTemplate.send("topic1", message);
     }
 
+    public void sendMessage(String topic, String message) {
+        System.out.println("send message : " + message);
+        this.kafkaTemplate.send(topic, message);
+    }
+
+
+    public void sendMessages(int n) {
+        
+        for (int i=1; i<n+1; i++){
+            kafkaTemplate.send("topic1", String.valueOf(i+"th message"));
+        }
+    }
+
+
+
+
+
 }

@@ -10,4 +10,9 @@ public class KafkaSampleConsumerService {
     public void consume(String message) throws Exception {
         System.out.println("receive message : " + message);
     }
+
+    @KafkaListener(topics = "test1", groupId = "groupId1")
+    public void consume2(String message) throws Exception {
+        System.out.println("receive message : " + message);
+    }
 }
