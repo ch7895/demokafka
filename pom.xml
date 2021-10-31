@@ -27,11 +27,13 @@
 			<groupId>org.apache.kafka</groupId>
 			<artifactId>kafka-streams</artifactId>
 		</dependency>
+<!--		
 		<dependency>
 			<groupId>org.springframework.experimental</groupId>
 			<artifactId>spring-native</artifactId>
 			<version>${spring-native.version}</version>
 		</dependency>
+-->
 		<dependency>
 			<groupId>org.springframework.kafka</groupId>
 			<artifactId>spring-kafka</artifactId>
@@ -86,25 +88,6 @@
 					</image>
 				</configuration>
 			</plugin>
-			<plugin>
-				<groupId>org.springframework.experimental</groupId>
-				<artifactId>spring-aot-maven-plugin</artifactId>
-				<version>${spring-native.version}</version>
-				<executions>
-					<execution>
-						<id>test-generate</id>
-						<goals>
-							<goal>test-generate</goal>
-						</goals>
-					</execution>
-					<execution>
-						<id>generate</id>
-						<goals>
-							<goal>generate</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
 		</plugins>
 	</build>
 	<repositories>
@@ -128,6 +111,7 @@
 		</pluginRepository>
 	</pluginRepositories>
 
+<!--
 	<profiles>
 		<profile>
 			<id>native</id>
@@ -170,5 +154,5 @@
 			</build>
 		</profile>
 	</profiles>
-
+-->
 </project>
